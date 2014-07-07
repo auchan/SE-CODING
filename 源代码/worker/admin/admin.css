@@ -1,0 +1,32 @@
+.req-panel {
+	border: 1px solid #696;
+	/*padding: 60px 0;*/
+	width: 500px;
+	height: 50px;
+	padding: 2px;
+	/*text-align: center;*/
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	-moz-box-shadow: #666 0px 0px 10px;
+	box-shadow: #666 0px 0px 10px;background: #ffffff;behavior: url(/PIE.htc);
+	margin:5px;
+	display:block;
+	overflow:hidden;
+}
+.my-label {
+	display:inline-block;
+	min-width: 100px;
+	margin-right: 5px;
+	margin-top:1px;
+	margin-bottom:1px;
+	height:30px;line-height:30px;font-size:100%
+}
+.title-label {
+	display:inline-block;
+	margin-right: 5px;
+	margin-top:1px;
+	margin-bottom:1px;
+	height:30px;line-height:30px;font-size:100%
+}

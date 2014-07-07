@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='gb2312'>
+	<title>后台登陆</title>
+	<base href="../" />
+	<link rel="stylesheet" type="text/css" href="easyui/themes/metro/easyui.css">
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<style>
+	ul, ol, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+	</style>
+</head>
+<body>
+	<div style="margin-left:auto;margin-right:auto;width:500px;">
+	<div id="p" class="easyui-panel" title="管理员/员工登陆" 
+        style="width:450px;height:200px;padding:10px;background:#fafafa;"
+        data-options="closable:true,
+                collapsible:true,minimizable:true,maximizable:true">
+			<div style="padding:10px 60px 20px 60px">
+			<form id="LoginForm" name="LoginForm" method="post" action="Action/LoginAction.php" onSubmit="return InputCheck(this)">
+			<table>
+				<tr>
+					<td><label for="username" class="label">用户名:</label></td>
+					<td><input id="username" name="username" type="text" class="input" /></td>
+				</tr>
+				<tr>
+					<td><label for="password" class="label">密 码:</label></td>
+					<td><input id="password" name="password" type="password" class="input" /></td>
+				</tr>
+				<tr>
+					<td><label for="usertype" class="label">用户类型:</label></td>
+					<td><select id="usertype" name="usertype" style="width:150px"></select></td>
+					<div id="sp">
+					<div style="padding:10px">
+					<input type="radio" name="lang" value="02"><span>前台</span><br/>
+					<input type="radio" name="lang" value="03"><span>后厨</span><br/>
+					<input type="radio" name="lang" value="04"><span>管理员</span><br/>
+					</div>
+					</div>
+					<script type="text/javascript">
+					$(function(){
+						$('#usertype').combo({
+						required:true,
+						editable:false
+						});
+						$('#sp').appendTo($('#usertype').combo('panel'));
+						$('#sp input').click(function(){
+							var v = $(this).val();
+							var s = $(this).next('span').text();
+							$('#usertype').combo('setValue', v).combo('setText', s).combo('hidePanel');
+						});
+					});
+					</script>
+				</tr>
+				<tr>
+					<td></td>
+                    <td><input type="submit" value="Submit" ></input></td>
+                </tr>
+			</table>
+			</form>
+			</div>
+	</div>
+	</div>
+</body>
+</html>

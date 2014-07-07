@@ -1,0 +1,50 @@
+﻿	body {
+    color: #333;
+    font: 13px/1.6em "Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;
+}
+	.rst-dish-img-item {
+    width: 25%;
+}
+	.rst-d-img-wrapper {
+    height: 232px;
+}
+	.order-menu {
+border: 1px solid #696;
+/* padding: 60px 0;width: 200px; */
+padding: 2px;
+/*text-align: center; */
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: #666 0px 0px 10px;
+-moz-box-shadow: #666 0px 0px 10px;
+box-shadow: #666 0px 0px 10px;background: #eeffee;behavior: url(/PIE.htc);
+	}
+.panel-title {
+font-size: 12px;
+font-weight: bold;
+color: #777;
+height: 16px;
+line-height: 16px;
+}
+.panel-body {
+overflow: auto;
+border-top-width: 0;
+padding: 0;
+}
+.panel {
+	margin:0;
+}
+ ul{list-style:none;} 
+
+a {
+    cursor: pointer;
+    color: #08C;
+}
+.symbol-rmb:before {
+    content: "¥";
+    margin-right: 1px;
+    font-family: arial,sans-serif;
+    font-size: inherit;
+    line-height: inherit;
+}
